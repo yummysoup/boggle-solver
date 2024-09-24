@@ -1,0 +1,119 @@
+<html>
+  
+  <head>
+    <style>
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-family: arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px;
+      }
+      #input_container {
+        float: right;
+        margin: 10px 0 10px 10px;
+
+      }
+      #input {
+        font-family: monospace;
+        font-size: 20px;
+        width: 220px;
+        height: 250px;
+      }
+      
+      
+      #board {
+        border: 2px solid #333;
+        background: #ebead8;
+        padding: 8px;
+        margin: 10px;
+        float: left;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      
+      #board .row {
+        overflow: hidden;
+      }
+      
+      #board .letter {
+        border: 3px solid #ccc;
+        padding: 8px 5px 5px;
+        font-family: arial, sans-serif;
+        font-size: 30px;
+        width: 40px;
+        height: 35px;
+        float: left;
+        border-radius: 3px;
+        margin: 1px;
+        text-align: center;
+        background: #fff;
+        font-weight: bold;
+      }
+      
+      #words {
+        clear: both;
+        font-family: consolas, monospace;
+        text-transform: lowercase;
+        padding: 30px;
+        margin: 10px;
+        list-style: none;
+      }
+      
+      #words li {
+        display: inline-block;
+        min-width: 120px;
+        padding: 2px 5px;
+      }
+      
+      body.loading * {
+        display: none;
+      }
+      #status {
+        display: none;
+      }
+      body.loading #status {
+        display: block;
+      }
+      
+      
+      #footer {
+        color: #666;
+        font-family: arial, sans-serif;
+        font-size: 10px;
+        margin: 30px;
+        border-top: 1px dotted #ccc;
+        padding-top: 5px;
+      }
+    </style>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.debounce-1.0.5.js"></script>
+    <script src="js/ss.js"></script>
+  </head>
+  <body class="loading">
+    <div id="status">Loading Dictionary...</div>
+    <h1>Solver</h1>
+    <div id="input_container">
+    <textarea id="input">find
+each
+real
+word</textarea>
+    </div>
+    <div id="board">
+      
+      
+    </div>
+    
+    <ul id="words"></ul>
+    
+    <div id="footer">&copy; 2014 Terry Gregory</div>
+    <script>
+      
+      ss.init();
+      
+      
+    </script>
+  </body>
+</html>
